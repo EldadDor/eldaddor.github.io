@@ -3,3 +3,58 @@
 ---
 
 @import 'modern-resume-theme';
+
+/* Fade-in animation for page load */
+.page-content {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for project/experience cards */
+.list-container .list-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-container .list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Animated gradient for name/title */
+.header-contianer .header-right h1 {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+/* Smooth transitions for links */
+a {
+  transition: color 0.3s ease;
+}
+
+/* Skills highlight animation */
+.page-content p mark {
+  transition: background-color 0.3s ease;
+}
+
+.page-content p mark:hover {
+  background-color: #ffd700;
+}
