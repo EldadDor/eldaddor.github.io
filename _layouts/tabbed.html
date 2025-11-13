@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="tabs-wrapper">
+  <nav class="tabs-nav">
+    <label for="tab-about" class="tab-item">
+      <span>About</span>
+      <input checked name="tabs-toggle" id="tab-about" type="radio">
+    </label>
+    <label for="tab-resume" class="tab-item">
+      <span>Resume</span>
+      <input name="tabs-toggle" id="tab-resume" type="radio">
+    </label>
+    <label for="tab-pdf" class="tab-item">
+      <span>PDF</span>
+      <input name="tabs-toggle" id="tab-pdf" type="radio">
+    </label>
+  </nav>
+
+  <div class="tab-content" id="tab-about-content">
+    {{ content }}
+  </div>
+
+  <div class="tab-content" id="tab-resume-content">
+    {% include resume-sections.html %}
+  </div>
+
+  <div class="tab-content" id="tab-pdf-content">
+    <embed src="/assets/resume.pdf" type="application/pdf" width="100%" height="800px" />
+  </div>
+</div>
