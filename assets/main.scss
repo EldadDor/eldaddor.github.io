@@ -1,10 +1,13 @@
 @import 'modern-resume-theme';
 
-// Hide radio buttons
+// Tabs wrapper
+.tabs-wrapper {
+  margin-top: 20px;
+}
+
+// Hide radio buttons but keep them functional
 .tabs-nav input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 // Tab navigation styling
@@ -30,7 +33,7 @@
 }
 
 // Active tab styling
-.tabs-nav input[type="radio"]:checked + .tab-label {
+input[type="radio"]:checked + .tab-label {
   background: #667eea;
   color: white;
   box-shadow: 0 -2px 10px rgba(102, 126, 234, 0.3);
@@ -44,9 +47,15 @@
 }
 
 // Show content based on selected tab
-#tab-about:checked ~ #content-about,
-#tab-resume:checked ~ #content-resume,
-#tab-pdf:checked ~ #content-pdf {
+.tabs-wrapper:has(#tab-about:checked) #content-about {
+  display: block;
+}
+
+.tabs-wrapper:has(#tab-resume:checked) #content-resume {
+  display: block;
+}
+
+.tabs-wrapper:has(#tab-pdf:checked) #content-pdf {
   display: block;
 }
 
@@ -69,4 +78,10 @@
 .pdf-fallback {
   margin-top: 20px;
   font-size: 14px;
+}
+
+// Ensure theme styles still apply
+.about-section,
+.resume-section {
+  margin-bottom: 20px;
 }
