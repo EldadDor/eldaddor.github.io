@@ -44,10 +44,9 @@
 }
 
 // Show content based on selected tab
-// Use attribute selectors to show content when corresponding radio is checked
-.tabs-wrapper input[id="tab-about"]:checked ~ #content-about,
-.tabs-wrapper input[id="tab-resume"]:checked ~ #content-resume,
-.tabs-wrapper input[id="tab-pdf"]:checked ~ #content-pdf {
+#tab-about:checked ~ #content-about,
+#tab-resume:checked ~ #content-resume,
+#tab-pdf:checked ~ #content-pdf {
   display: block;
 }
 

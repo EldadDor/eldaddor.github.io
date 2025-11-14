@@ -7,7 +7,7 @@ linkedin_username: your-linkedin-username
 github_username: eldaddor
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 # About Section
 about_content: |
