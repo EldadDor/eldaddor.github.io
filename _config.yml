@@ -17,7 +17,7 @@ about_content: |
 
 content:
   - title: Experience
-    layout: list
+    layout: tabbed
     content:
       - layout: left
         title: IDI
