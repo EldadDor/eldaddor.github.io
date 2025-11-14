@@ -16,7 +16,11 @@ layout: default
 
   <div class="tab-content" id="content-about">
     <div class="about-section">
-      {{ page.about_content | markdownify }}
+      {% if page.about_content %}
+        {{ page.about_content | markdownify }}
+      {% else %}
+        {{ site.about_content | markdownify }}
+      {% endif %}
     </div>
   </div>
 
