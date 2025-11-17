@@ -1,11 +1,13 @@
 # Personal info
+layout: tabbed
 name: Eldad Dor
 title: Senior Java Technical Lead & DevOps Engineer
 email: eldaddex@gmail.com
 website: https://eldaddor.github.io
 linkedin_username: your-linkedin-username
 github_username: eldaddor
-
+plugins:
+  - jekyll-seo-tag
 # Dark Mode
 darkmode: true
 
